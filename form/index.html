@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <main>
+                <h2 class="page-title">Форма обратной связи</h2>
+                <form action="#" class="form" id="form">
+                    <div class="option-block">
+                        <label for="name" class="option-title">Имя:</label>
+                        <input class="form-input invalid" type="text" name="name" id="name" placeholder="Введите ваше имя">
+                    </div>
+                    <div class="option-block">
+                        <label for="name" class="option-title">Телефон:</label>
+                        <input class="form-input invalid" type="tel" name="phone" id="phone" placeholder="Введите ваш телефон">
+                    </div>
+                    <div class="option-block">
+                        <label for="name" class="option-title">E-mail:</label>
+                        <input class="form-input invalid" type="email" name="email" id="email" placeholder="Введите ваш e-mail">
+                    </div>
+                    <div class="option-block">
+                        <label for="comment" class="option-title">Комментарий:</label>
+                        <input class="form-input invalid" type="text" name="comment" id="comment" placeholder="Комментарий">
+                    </div>
+    
+                    <button id="submit" type="button">Отправить</button>
+                </form>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>    
+    window.onload = () => {
+            document.getElementById('submit').addEventListener('click', e => {
+                const valid = new Form('form');
+            })
+        }
+    </script>
+</body>
+</html>
