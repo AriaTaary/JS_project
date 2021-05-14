@@ -1,22 +1,22 @@
 Vue.component('products', {
-    data(){
+    data() {
         return {
-            catalogUrl: '/catalogData.json',
+            // catalogUrl: '',
             products: [],
             filtered: [],
             imgCatalog: 'https://via.placeholder.com/300x150',
         }
     },
     methods: {
-        filter(value){
+        filter(value) {
             let regexp = new RegExp(value, 'i');
             this.filtered = this.products.filter(el => regexp.test(el.product_name));
         }
     },
-    mounted(){
-        this.$parent.getJson(`${API + this.catalogUrl}`)
+    mounted() {
+        this.$parent.getJson('/api/products')
             .then(data => {
-                for(let el of data){
+                for (let el of data) {
                     this.products.push(el);
                     this.filtered.push(el);
                 }
@@ -33,8 +33,15 @@ Vue.component('products', {
         </div>
     `
 });
+
 Vue.component('product', {
     props: ['product', 'img'],
+    data() {
+        return {
+            cartAPI: this.$root.$refs.cart,
+        };
+    },
+
     template: `
                     <div class="product-item">
                         <img class="product-img" :src="img"  alt="Some img">
