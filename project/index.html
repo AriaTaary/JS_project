@@ -1,34 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Интернет-магазин</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="content">
+    <div id="app" class="content">
         <div class="container">
             <header>
                 <div class="logo">
                     <span>CreativeName Shop</span>
                 </div>
-                <div class="menu">
-                    <ul class="menu-list">
-                        <li class="menu-item">Главная</li>
-                        <li class="menu-item">Каталог</li>
-                        <li class="menu-item">О нас</li>
-                    </ul>
+                <form action="#" class="search-form">
+                    <input type="text" class="search-field" v-model="searchLine">
+                    <button class="btn-search" type="submit" @click="filterGoods">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="cart">
+                    <button class="btn-basket" type="button" @click="isVisibleCart = true">Корзина</button>
+                    <div class="cart-block" v-show="isVisibleCart">
+                        <!-- условие для корзины -->
+                        <div class="empty" v-if="cartProducts.length === 0">
+                            <p>Корзина пуста</p>
+                        </div>
+                        <div v-else class="basket-items">
+                            <div class="basket-item" v-for="product of cartProducts" :key="product.id_product">
+                                <div class="product-item-info">
+                                    <h3>{{product.product_name}}</h3>
+                                    <p class="product-quantity">Количество: {{product.quantity}}</p>
+                                    <p class="product-price">Итого: {{product.quantity * product.price}}₽</p>
+                                </div>
+                                <button class="del-btn" @click="removeProduct(product)">Удалить 1 шт.</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <a href="./busket.html" class="btn-cart">Корзина</a>
             </header>
             <main>
                 <h1 class="page-title">Каталог<h1>
-                <div class="products"></div>
-                <h1 class="page-title">Корзина</h1>
-                <div class="basket"></div>
+                <!-- условие для списка товаров -->
+                <div class="empty" v-if="products.length === 0">
+                    <p>Товаров нет</p>
+                </div>
+                <div v-else class="products">
+                    <div class="product-item" v-for="product of products" :key="product.id_product">
+                        <img class="product-img" :src="imgCatalog" alt="Some img">
+                        <div class="product-item-info">
+                            <h3>{{product.product_name}}</h3>
+                            <p>{{product.price}}₽</p>
+                        </div>
+                        <button class="buy-btn" @click="addProduct(product)">Купить</button>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
-<script src="./js/main.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+            integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

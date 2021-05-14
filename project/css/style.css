@@ -40,7 +40,7 @@ header{
     padding: 20px 0;
 }
 
-.menu-list{
+/* .menu-list{
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -51,7 +51,7 @@ header{
 
 .menu-item{
     padding: 0 10px;
-}
+} */
 
 main{
     display: flex;
@@ -124,8 +124,65 @@ button, .btn-basket{
     box-sizing: border-box;
 }
 
+.btn-basket{
+    width: 78px;
+}
+
 button:hover, .btn-basket:hover{
     cursor: pointer;
     background-color: #474747;
     color: #ECECEC;
+}
+
+.search-form{
+    display: flex;
+    flex-direction: row;
+}
+
+.search-field{
+    height: 24px;
+    box-sizing: border-box;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid  #91865C;
+    outline: none;
+    padding-left: 5px;
+}
+
+.btn-search{
+    border-radius: 0 5px 5px 0;
+}
+
+.fa-search path{
+    color:  #ECECEC;
+}
+
+.empty{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.empty p{
+    color: #91865C;
+}
+
+.cart{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+.cart-block{
+    border: 1px solid #91865C;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    position: absolute;
+    width: 300px;
+}
+
+.basket-item:not(:last-child){
+    margin-bottom: 20px;
 }
