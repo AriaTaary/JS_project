@@ -1,0 +1,268 @@
+summary {
+  display: block;
+  outline: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.new__arrivals{
+    background: #F8F3F4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new__arrivals h3{
+    font-size: 24px;
+    line-height: 29px;
+    color: $colorSelect;
+    padding: 60px 0;
+}
+
+.breadcrumbs{
+    display: flex;
+    flex-direction: row;
+}
+
+.breadcrumbs a:not(:last-child){
+    color: #636363;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.breadcrumbs a:not(:last-child)::after{
+    content: "/";
+    color: #636363;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 5px;
+}
+
+.breadcrumbs a:hover{
+    color: $colorSelect;
+}
+
+.breadcrumbs a:last-child{
+    color: $colorSelect;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.featured_items_nav{
+    display: flex;
+    flex-direction: row;
+    padding: 37px 0 34px 0;
+    width: 100%;
+    position: relative;
+    // align-items: center;
+}
+
+.filter{
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 99;
+    background-color: transparent;
+    padding-bottom: 18px;
+    margin-right: 288.67px;
+    padding: 13px 0 16px 0;
+}
+
+.filter_block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.filter svg path{
+    fill: #6F6E6E;
+}
+
+.filter[open]{
+    padding: 13px 16px 16px 16px;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    color: $colorSelect;
+    background-color: white;
+    width: $widthBlock;
+    position: absolute;
+}
+
+.filter[open] svg path{
+    fill: $colorSelect;
+}
+
+.filter svg{
+    padding-left: 10px;
+}
+
+.filter:hover{
+    color: $colorSelect;
+}
+
+.filter:hover svg path{
+    fill: $colorSelect;
+}
+
+.filter-title{
+    font-size: 14px;
+    line-height: 17px;
+    color: $colorSelect;
+    border-left: 3px solid $colorSelect;
+    border-bottom: 1px solid #EBEBEB;
+    padding: 11px;
+}
+
+.filter-part{
+    margin-top: 18px;
+}
+
+.filter_list{
+    list-style: none;
+    margin: 20px 0;
+}
+
+.filter_item:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.filter_link{
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+}
+
+// .filter::after{
+//     content: url(../img/filter.svg);
+//     padding-left: 10px;
+// }
+
+.sort{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.sort a{
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.sort a:not(:last-child){
+    margin-right: 15px;
+}
+
+.sort svg{
+    padding: 0px 10px;
+}
+
+.sort a:hover{
+    color: $colorSelect;
+}
+
+.sort a:hover svg path{
+    fill: $colorSelect;
+}
+
+.trending_item, .size_item, .price_item{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 13px 0 16px 0;
+    :hover{
+        color: $colorSelect;
+        svg path{
+            fill: $colorSelect;
+        }
+    }
+}
+
+.checkbox_block{
+    position: absolute;
+    z-index: 99;
+    background-color: white;
+    padding: 7px;
+    left: -7px;
+    width: 65px;
+    margin-top: 5px;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    .checkbox:not(:last-child){
+        padding-bottom: 6px;
+    }
+    .checkbox{
+        input{
+            cursor: pointer;
+        }
+        label{
+            font-size: 14px;
+            line-height: 16px;
+            color: #6F6E6E;
+            padding-left: 10px;
+        }
+    }
+}
+
+.pages{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #EBEBEB;
+    border-radius: 3px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pages button{
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.pages button svg:hover path{
+    fill: $colorSelect;
+}
+
+.numbers{
+    display: flex;
+    flex-direction: row;
+}
+
+.numbers p{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color:  #bbbbbb;
+    padding: 11px 0;
+}
+
+.numbers p:hover{
+    color: $colorSelect;
+    cursor: pointer;
+}
+
+.numbers p:not(:last-child){
+    padding-right: 11px;
+}
