@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app" class="content">
+        <error class="error" ref="error"></error>
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <span>CreativeName Shop</span>
+                </div>
+                <search ref="search"></search>
+                <cart ref="cart"></cart>
+            </header>
+            <main>
+                <h1 class="page-title">Каталог<h1>
+                <products ref="products"></products>
+            </main>
+        </div>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+            integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/CartComp.js"></script>
+    <script src="./js/ProductComp.js"></script>
+    <script src="./js/SearchComp.js"></script>
+    <script src="./js/ErrorComp.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
