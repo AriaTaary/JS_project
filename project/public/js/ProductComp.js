@@ -49,7 +49,7 @@ Vue.component('product', {
                             <h3>{{product.product_name}}</h3>
                             <p>{{product.price}}₽</p>
                         </div>
-                        <button class="buy-btn" @click="$root.$refs.cart.addProduct(product)">Купить</button>
+                        <button class="buy-btn" @click="cartAPI.addProduct(product)">Купить</button>
                     </div>
     `
 });
