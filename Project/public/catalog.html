@@ -11,6 +11,7 @@
 </head>
 
 <body>
+<div id="app">
     <header class="header center">
         <div class="header__left">
             <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
@@ -22,7 +23,8 @@
         <div class="header__right">
             <a href="#" id="menu-button"><img src="img/menu.svg" alt="menu"></a>
             <a href="registration.html"><img src="img/account.svg" alt="account"></a>
-            <a href="shopping-cart.html"><img src="img/cart.svg" alt="cart"></a>
+            <cart ref="cart"></cart>
+            <!-- <a href="shopping-cart.html"><img src="img/cart.svg" alt="cart"></a> -->
         </div>
     </header>
     <section class="dropdown-menu">
@@ -63,7 +65,7 @@
             <a href="">NEW ARRIVALS</a>
         </div>
     </section>
-    <section id="app" class="featured_items center">
+    <section class="featured_items center">
         <div class="featured_items_nav">
             <details class="filter">
                 <summary>
@@ -494,6 +496,7 @@
             </a>
         </div>
     </footer>
+</div>
 
         <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
             integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
