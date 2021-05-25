@@ -9,53 +9,18 @@
 
 <body>
     <div id="app" class="content">
+        <error class="error" ref="error"></error>
         <div class="container">
             <header>
                 <div class="logo">
                     <span>CreativeName Shop</span>
                 </div>
-                <form action="#" class="search-form">
-                    <input type="text" class="search-field" v-model="searchLine">
-                    <button class="btn-search" type="submit" @click="filterGoods">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
-                <div class="cart">
-                    <button class="btn-basket" type="button" @click="isVisibleCart = true">Корзина</button>
-                    <div class="cart-block" v-show="isVisibleCart">
-                        <!-- условие для корзины -->
-                        <div class="empty" v-if="cartProducts.length === 0">
-                            <p>Корзина пуста</p>
-                        </div>
-                        <div v-else class="basket-items">
-                            <div class="basket-item" v-for="product of cartProducts" :key="product.id_product">
-                                <div class="product-item-info">
-                                    <h3>{{product.product_name}}</h3>
-                                    <p class="product-quantity">Количество: {{product.quantity}}</p>
-                                    <p class="product-price">Итого: {{product.quantity * product.price}}₽</p>
-                                </div>
-                                <button class="del-btn" @click="removeProduct(product)">Удалить 1 шт.</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <search ref="search"></search>
+                <cart ref="cart"></cart>
             </header>
             <main>
                 <h1 class="page-title">Каталог<h1>
-                <!-- условие для списка товаров -->
-                <div class="empty" v-if="products.length === 0">
-                    <p>Товаров нет</p>
-                </div>
-                <div v-else class="products">
-                    <div class="product-item" v-for="product of products" :key="product.id_product">
-                        <img class="product-img" :src="imgCatalog" alt="Some img">
-                        <div class="product-item-info">
-                            <h3>{{product.product_name}}</h3>
-                            <p>{{product.price}}₽</p>
-                        </div>
-                        <button class="buy-btn" @click="addProduct(product)">Купить</button>
-                    </div>
-                </div>
+                <products ref="products"></products>
             </main>
         </div>
     </div>
@@ -63,7 +28,12 @@
             integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
             crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/ErrorComp.js"></script>
+    <script src="./js/CartComp.js"></script>
+    <script src="./js/ProductComp.js"></script>
+    <script src="./js/SearchComp.js"></script>
+        <script src="./js/main.js"></script>
 </body>
 
 </html>
